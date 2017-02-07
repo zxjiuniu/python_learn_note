@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 #use key to save username and password
 user = {
 'dave':'123456'}
@@ -7,17 +9,28 @@ user = {
 #accept input
 def user_input():
 	global name,password
-	name = raw_input('Username:')
-	password = raw_input('Password:')
-
-
+	while True:
+		name = raw_input('Username:').strip()
+		if len(name) == 0:
+			print "\033[31;1mUsername can not be null\033[0m"
+			continue
+		else:
+			break
+	while True:
+		password = raw_input('Password:').strip()
+		if len(password) == 0:
+			print "\033[31;1mPassword can not be null\033[0m"
+			continue
+		else:
+			break
 #try three times
 counter = 0
 while  counter < 3:
 	user_input()
 	if name in user.keys() and password == user[name]:
-		print "Welcome to use python"		
-		break
+		#print "Welcome to use python"		
+		#break
+		sys.exit("Welcome to use python")
 	else:
 		print "Username or password is not correct,try again."
 		counter += 1
