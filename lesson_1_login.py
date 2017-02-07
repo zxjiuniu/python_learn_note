@@ -12,14 +12,14 @@ def user_input():
 
 
 #try three times
-i = 0
-while  i < 3:
+counter = 0
+while  counter < 3:
 	user_input()
 	if name in user.keys() and password == user[name]:
 		print "Welcome to use python"		
 		break
 	else:
 		print "Username or password is not correct,try again."
-		i += 1
+		counter += 1
 else:
 	print "User as locked"
