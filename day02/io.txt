@@ -1,0 +1,22 @@
+打开文件
+f = file('文件','模式')
+r,读,默认
+w,写
+a,追加
+
+写入文件
+f.write('sth')
+
+
+读文件中的内容
+f.read()
+f.readline()
+f.readlines()
+
+
+将内存的数据写入文件
+f.flush()
+
+查看指针位置及移动指针位置
+f.tell()
+f.seek()
