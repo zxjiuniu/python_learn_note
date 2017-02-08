@@ -1,5 +1,5 @@
 打开文件
-f = file('文件','模式')
+f = file('文件','模式') or f = open('文件',‘模式’)
 r,读,默认
 w,写
 a,追加
@@ -23,3 +23,10 @@ f.flush()
 查看指针位置及移动指针位置
 f.tell()
 f.seek()
+
+文件内容替换
+for line in fileinput.input('filepath',inplace=1,backup='.bak'):
+	line = line.replace('oldtext','newtext')
+	print line,
+
+替换时会生成一个.bak结尾的备份文件,必须要print才能写入文件中，不写内容会被清空掉。
