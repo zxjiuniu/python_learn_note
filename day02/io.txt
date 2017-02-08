@@ -13,6 +13,9 @@ f.read()
 f.readline()
 f.readlines()
 
+上面几种方式是直接读入到内存中，下面是生成一个迭代器
+f.xreadlines() 
+
 
 将内存的数据写入文件
 f.flush()
