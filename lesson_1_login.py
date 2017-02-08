@@ -23,16 +23,18 @@ def user_input():
 			continue
 		else:
 			break
-#try three times
+
+#Have three chances to try
 counter = 0
 while  counter < 3:
+	print "You have %s chances to try to login" %(3-counter)
 	user_input()
 	if name in user.keys() and password == user[name]:
 		#print "Welcome to use python"		
 		#break
-		sys.exit("Welcome to use python")
+		sys.exit("\033[32;1mWelcome to use python\033[0m")
 	else:
 		print "Username or password is not correct,try again."
 		counter += 1
 else:
-	print "User as locked"
+	print "\033[31;1mYou have more than attemps,user has locked\033[0m"
