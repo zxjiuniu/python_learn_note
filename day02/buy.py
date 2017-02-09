@@ -26,7 +26,7 @@ while True:
 		print "buy succed"
 		buylist.append(buy)
 		salary -= goods[buy]
-		print "\033[32;1mYour buylist:\033[0m"
+		print "\033[32;1mYour shoppinglist:\033[0m"
 		print "\033[31;1mGoods\033[0m:\033[32;1mNumbers\033[0m"
 		for i in buylist:
 			if i not in buylist2:
