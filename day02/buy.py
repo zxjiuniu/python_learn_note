@@ -21,7 +21,12 @@ for k,v in goods.items():
 salary = int(raw_input("Input your salary:"))
 
 while True:
-	buy = raw_input("What you want to buy?:")
+	#print "If you want to exit,enter quit"
+	buy = raw_input("\033[31;1mIf you want to exit,enter quit at anytime.\033[0m\nWhat you want to buy?:")
+	if buy == 'quit':
+		sys.exit('Goodbye')
+	else:
+		pass
 	if salary >= goods[buy]:
 		print "buy succed"
 		buylist.append(buy)

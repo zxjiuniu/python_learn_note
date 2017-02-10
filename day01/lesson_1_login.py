@@ -29,7 +29,7 @@ counter = 0
 while  counter < 3:
 	print "You have %s chances to try to login" %(3-counter)
 	user_input()
-	if name in user.keys() and password == user[name]:
+	if user.has_key(name) and password == user[name]:
 		#print "Welcome to use python"		
 		#break
 		sys.exit("\033[32;1mWelcome to use python\033[0m")
