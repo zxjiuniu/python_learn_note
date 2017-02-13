@@ -1,3 +1,79 @@
 1.python查找模块的路径
 import sys
 sys.path
+
+2.enumerate
+显示元素的时候可以输出其位置,如：
+for i,v in list:
+	print i,v
+
+3.引用、浅拷贝，深拷贝
+1. copy.copy 浅拷贝 只拷贝父对象，不会拷贝对象的内部的子对象。
+2. copy.deepcopy 深拷贝 拷贝对象及其子对象 
+    import copy  
+    a = [1, 2, 3, 4, ['a', 'b']] #原始对象  
+      
+    b = a #赋值，传对象的引用  
+    c = copy.copy(a) #对象拷贝，浅拷贝  
+    d = copy.deepcopy(a) #对象拷贝，深拷贝  
+      
+    a.append(5) #修改对象a  
+    a[4].append('c') #修改对象a中的['a', 'b']数组对象  
+      
+    print 'a = ', a  
+    print 'b = ', b  
+    print 'c = ', c  
+    print 'd = ', d  
+
+4.set
+集合可以用来给列表去重
+set(list)
+
+a | b ;并集
+a & b ;交集
+a - b ;差集
+a ^ b ;对称差集，两个集合不共有的元素
+
+5.zip
+将两个列表合并为一个元组列表
+a = (1,2,3,4)
+b = ('a','b','c','d')
+zip(a,b)=[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+如果长度不一致，多出来的元素忽略
+
+
+6.map
+map(None,a,b)
+效果同5
+
+将a中的元素乘2
+map(lambda x:x*2,a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

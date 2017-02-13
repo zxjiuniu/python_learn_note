@@ -33,13 +33,17 @@ while True:
 		salary -= goods[buy]
 		print "\033[32;1mYour shoppinglist:\033[0m"
 		print "\033[31;1mGoods\033[0m:\033[32;1mNumbers\033[0m"
+
+		'''
 		for i in buylist:
 			if i not in buylist2:
 				buylist2.append(i)
 			else:
 				pass
-		for k in buylist2:
-			print "\033[31;1m%s\033[0m:\033[32;1m%d\33[0m" %(k,buylist.count(k))
+		'''
+
+		for i in set(buylist):
+			print "\033[31;1m%s\033[0m:\033[32;1m%d\33[0m" %(i,buylist.count(i))
 		print "Your balance is:\033[31;1m%d\033[0m" % salary
 		continue
 	elif salary >= 10:
