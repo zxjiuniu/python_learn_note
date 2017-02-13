@@ -49,6 +49,28 @@ map(None,a,b)
 将a中的元素乘2
 map(lambda x:x*2,a)
 
+7.iter()
+迭代器
+
+8.*args,**kargs
+当参数不确定时使用
+*args可以接受一个列表为参数
+**kargs可以接受一个字典为参数
+
+l = (1,'a',2)
+def fun(*args):
+	print args
+fun(*l)
+
+k = {"name"='Jack','age'=20}
+def fun(**kargs):
+	print kargs
+fun(**k)
+
+
+
+
+
 
 
 
